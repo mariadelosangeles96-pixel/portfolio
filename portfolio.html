@@ -4,43 +4,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars - Mi Portfolio</title>
+    <link rel="stylesheet" href="portfolio-estilos.css">
 </head>
 <body>
     <header>
-        <nav>
-            <!--menú-->
+        <nav> <!--menú-->
+            <ul class="lista-navbar">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobremi">Sobre mí</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacto">Contacto</a>
+                    </li>
+                    <!--idea provisional: botón offcanvas
+                    <li class="nav-item">
+                        <button class="boton-inicio" type="button">
+                            //icono de inicio
+                        </button>
+                    </li>
+                    -->
+                </ul>
         </nav>
-        <div>
+        <div class="iconos-OS">
             <!--iconos decorativos de la barra-->
         </div>
     </header>
     <main>
         <!--img mi avatar-->
 
+        <!--idea principal: cada sección será una "ventana" del OS-->
         <!--sección 1: sobre mí-->
-        <section id="sobreMi">
-            <header id="ventana1">
+        <section id="sobreMi" class="ventana-OS">
+            <header class="header-ventana">
                 <h2>Sobre mí</h2> <!--a modo de readme-->
-                <div>
-                    <!--botones ventana-->
+                <div class="botones-ventana">
+                    <!--iconos decorativos de botones de la ventana-->
                 </div>
             </header>
-            <div>
+            <div class="contenido-sobreMi">
                 <p>texto sobre mí</p>
             </div>
         </section>
 
         <!--sección 2: mis habilidades-->
-        <section>
-            <header id="ventana2">
+        <section id="skills" class="ventana-OS">
+            <header class="header-ventana">
                 <h2>Skills</h2>
-                <div>
-                    <!--botones ventana-->
+                <div class="botones-ventana">
+                    <!--iconos decorativos de botones de la ventana-->
                 </div>
             </header>
-            <div>
-                <ul>
-                    <li>HTML</li> <!--con iconos-->
+            <div class="contenido-skills">
+                <ul class="lista-skills">
+                    <li><img src="" alt="icono HTML">HTML</li> <!--añadir iconos-->
+                    <li><img src="" alt="icono CSS">CSS</li>
                 </ul>
             </div>
         </section>
@@ -51,8 +71,24 @@
                 <h2>Contacta conmigo</h2>
             </header>
             <div>
-                <form action="">
-                    <!--contenido formulario (nombre, email, mensaje, enviar)-->
+                <form id="form-contacto">
+                    <label for="name">Nombre</label>
+                    <input class="form-input" id="name" type="text" placeholder="Tu nombre..." required />
+                    <br><br>
+
+                    <label for="email">Email</label>
+                    <input class="form-input" id="email" type="email" placeholder="nombre@ejemplo.com" required />
+                    <br><br>
+                    
+                    <label for="message">Mensaje</label>
+                    <textarea class="form-input" id="message" type="text" placeholder="Escribe tu mensaje..." required></textarea>
+                    <br><br>
+
+                    <!--añadir validación del formulario-->
+
+                    <button id="enviar" type="submit">
+                        Enviar
+                    </button>
                 </form>
             </div>
         </section>
