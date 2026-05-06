@@ -1,0 +1,131 @@
+body {
+    background-color:antiquewhite;
+    color:saddlebrown;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 40px;
+}
+
+.header-principal {
+    background-color:darkseagreen;
+    border: 2px solid saddlebrown;
+    border-radius: 12px;
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.lista-navbar {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: saddlebrown;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.nav-link:hover {
+    color:bisque;
+}
+
+/* secciones */
+.ventana-OS {
+    background-color: white;
+    border: 2px solid saddlebrown;
+    border-radius: 8px;
+    margin-bottom: 35px;
+    overflow: hidden;
+}
+
+.header-ventana {
+    background-color:pink;
+    padding: 8px 15px;
+    border-bottom: 2px solid saddlebrown;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-ventana h2 {
+    margin: 0;
+    font-size: 1rem;
+    color: saddlebrown;
+}
+
+.contenido-sobreMi, .contenido-skills {
+    padding: 25px;
+}
+
+.lista-skills {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.lista-skills li {
+    background-color:bisque;
+    border: 1px solid saddlebrown;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#form-contacto {
+    background-color: white;
+    border: 2px dashed darkseagreen;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid darkseagreen;
+    border-radius: 6px;
+    background-color: lightyellow;
+    box-sizing: border-box;
+}
+
+#enviar {
+    background-color: darkseagreen;
+    color: saddlebrown;
+    border: 2px solid saddlebrown;
+    padding: 10px 25px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#enviar:hover {
+    box-shadow: 2px 2px 0px saddlebrown;
+}
+
+
+footer {
+    text-align: center;
+    padding: 30px;
+    margin-top: 60px;
+    border-top: 2px solid darkseagreen;
+    font-size: 0.8rem;
+}
