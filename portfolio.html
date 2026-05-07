@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars - Mi Portfolio</title>
     <link rel="stylesheet" href="portfolio-estilos.css">
 </head>
+
 <body>
-    <header>
+    <header class="header-principal">
         <nav> <!--menú-->
             <ul class="lista-navbar">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#sobremi">Sobre mí</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                    <!--idea provisional: botón offcanvas
+                <li class="nav-item">
+                    <a class="nav-link" href="#sobremi">Sobre mí</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+                <!--idea provisional: botón offcanvas
                     <li class="nav-item">
                         <button class="boton-inicio" type="button">
                             //icono de inicio
                         </button>
                     </li>
                     -->
-                </ul>
+            </ul>
         </nav>
         <div class="iconos-OS">
             <!--iconos decorativos de la barra-->
@@ -65,12 +67,42 @@
             </div>
         </section>
 
-        <!--sección 3: contacto-->
-        <section>
-            <header>
+        <!--sección 3: proyectos-->
+        <section id="proyectos" class="ventana-OS">
+            <header class="header-ventana">
+                <h2>Mis Proyectos</h2>
+                <div class="botones-ventana"></div>
+            </header>
+            <div class="contenido-proyectos">
+                <article class="proyecto-card">
+                    <div class="proyecto-img">1</div>
+                    <h3>Proyecto 1</h3>
+                    <p>Descripción proyecto 1.</p>
+                    <a href="#" class="btn-proyecto">Saber más</a>
+                </article>
+
+                <article class="proyecto-card">
+                    <div class="proyecto-img">2</div>
+                    <h3>Proyecto 2</h3>
+                    <p>Descripción proyecto 2.</p>
+                    <a href="#" class="btn-proyecto">Saber más</a>
+                </article>
+
+                <article class="proyecto-card">
+                    <div class="proyecto-img">3</div>
+                    <h3>Proyecto 3</h3>
+                    <p>Descripción proyecto 3.</p>
+                    <a href="#" class="btn-proyecto">Saber más</a>
+                </article>
+            </div>
+        </section>
+
+        <!--sección 4: contacto-->
+        <section id="contacto" class="ventana-OS">
+            <header class="header-ventana">
                 <h2>Contacta conmigo</h2>
             </header>
-            <div>
+            <div class="div-formulario">
                 <form id="form-contacto">
                     <label for="name">Nombre</label>
                     <input class="form-input" id="name" type="text" placeholder="Tu nombre..." required />
@@ -79,9 +111,10 @@
                     <label for="email">Email</label>
                     <input class="form-input" id="email" type="email" placeholder="nombre@ejemplo.com" required />
                     <br><br>
-                    
+
                     <label for="message">Mensaje</label>
-                    <textarea class="form-input" id="message" type="text" placeholder="Escribe tu mensaje..." required></textarea>
+                    <textarea class="form-input" id="message" type="text" placeholder="Escribe tu mensaje..."
+                        required></textarea>
                     <br><br>
 
                     <!--añadir validación del formulario-->
@@ -95,10 +128,14 @@
     </main>
 
     <footer>
-        <p>Mars - 2026</p>
-        <div>
+        <p>&copy; Mars - 2026</p>
+        <div class="redes-sociales">
             <!--iconos con sus enlaces-->
+            <a href="#" class="btn-social">Instagram</a>
+            <a href="#" class="btn-social">GitHub</a>
+            <a href="#" class="btn-social">LinkedIn</a>
         </div>
     </footer>
 </body>
+
 </html>

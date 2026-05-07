@@ -82,6 +82,51 @@ body {
     gap: 10px;
 }
 
+.contenido-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 25px;
+    justify-content: space-around;
+}
+
+.proyecto-card {
+    width: 350px;
+    border: 2px solid saddlebrown;
+    padding: 20px;
+    background-color: lightyellow;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.proyecto-card:hover {
+    background-color: ivory;
+}
+
+.proyecto-img {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    background: bisque;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-proyecto {
+    display: inline-block;
+    margin-top: 10px;
+    color: saddlebrown;
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+.btn-proyecto:hover {
+    color: indianred;
+}
+
 #form-contacto {
     background-color: white;
     border: 2px dashed darkseagreen;
@@ -121,11 +166,34 @@ label {
     box-shadow: 2px 2px 0px saddlebrown;
 }
 
-
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
     text-align: center;
-    padding: 30px;
+    padding: 40px;
     margin-top: 60px;
     border-top: 2px solid darkseagreen;
+    font-size: 0.9rem;
+}
+
+.redes-sociales {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-social {
+    padding: 8px 15px;
+    border: 1px solid darkseagreen;
+    border-radius: 20px;
+    text-decoration: none;
+    color: saddlebrown;
+    background-color: white;
     font-size: 0.8rem;
+}
+
+.btn-social:hover {
+    background-color: darkseagreen;
+    color: white;
 }
