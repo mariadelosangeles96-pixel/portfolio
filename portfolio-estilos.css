@@ -1,10 +1,57 @@
+:root {
+    --bg-body: antiquewhite;
+    --bg-escritorio: #f4eee1;
+    --color-texto: saddlebrown;
+    --bg-ventana: white;
+    --border-color: saddlebrown;
+}
+
+[data-tema="dark"] {
+    --bg-body: #2d2a26;
+    --bg-escritorio: #1a1816;
+    --color-texto: #eaddca;
+    --bg-ventana: #3e3a35;
+    --border-color: #eaddca;
+}
+
 body {
-    background-color:antiquewhite;
-    color:saddlebrown;
+    background-color: var(--bg-body);
+    color: var(--color-texto);
+    transition: background-color 0.3s, color 0.3s;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;
     margin: 0;
     padding: 40px;
+}
+
+.escritorio-os {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #f4eee1; 
+    background-image: 
+        radial-gradient(circle, #d2b48c 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.contenedor-presentacion {
+    position: relative;
+    width: 70%;
+    margin-left: 20%;
+    margin-bottom: 40px;
+}
+
+.avatar-sentada {
+    position: absolute;
+    left: -200px;
+    top: -80px;
+    width: 400px;
+    z-index: 10;
+    filter: drop-shadow(5px 5px 0px rgba(139, 69, 19, 0.2));
 }
 
 .header-principal {
@@ -37,13 +84,34 @@ body {
     color:bisque;
 }
 
+.boton-tema {
+    background: var(--bg-ventana);
+    border: 2px solid var(--border-color);
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 8px;
+}
+
 /* secciones */
 .ventana-OS {
-    background-color: white;
-    border: 2px solid saddlebrown;
+    background-color: var(--bg-ventana);
+    border: 2px solid var(--border-color);
     border-radius: 8px;
     margin-bottom: 35px;
     overflow: hidden;
+    box-shadow: 10px 10px 0px rgba(139, 69, 19, 0.1);
+}
+
+.botones-ventana span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid saddlebrown;
+    margin-left: 5px;
+    text-align: center;
+    font-size: 13px;
+    cursor: default;
+    background: white;
 }
 
 .header-ventana {
@@ -62,24 +130,87 @@ body {
 }
 
 .contenido-sobreMi, .contenido-skills {
-    padding: 25px;
+    padding: 20px;
+}
+
+#skills {
+    width: 60%;
+    align-self: flex-end;
+    position: relative;
+    z-index: 1;
+    margin-top: -30px;
 }
 
 .lista-skills {
     list-style: none;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     gap: 15px;
+    justify-content: center;
 }
 
 .lista-skills li {
-    background-color:bisque;
-    border: 1px solid saddlebrown;
-    padding: 8px 15px;
-    border-radius: 5px;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: center; 
+    background-color: bisque;
+    border: 1px solid saddlebrown;
+    padding: 10px;
+    border-radius: 8px;
+    min-width: 150px;
+}
+
+.lista-skills img {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.skill-texto {
+    display: block;
+    color: saddlebrown;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.puntos-vida {
+    color: #cc6666;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin: 0;
+}
+
+#idiomas {
+    width: 40%;
+    align-self: flex-start;
+    margin-top: -75px;
+    margin-left: 18%;
+    position: relative;
+    z-index: 2;
+}
+
+.idioma-item {
+    margin: 20px 20px;
+}
+
+.progreso-bar {
+    background-color: #e0d8c3;
+    border: 1px solid saddlebrown;
+    height: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.llenado {
+    background-color: darkseagreen;
+    height: 100%;
+    border-right: 1px solid saddlebrown;
+}
+
+#proyectos {
+    width: 90%;
+    margin: 0 auto;
 }
 
 .contenido-proyectos {
@@ -127,13 +258,20 @@ body {
     color: indianred;
 }
 
+#contacto {
+    width: 55%;
+    align-self: flex-end;
+    margin-right: 5%;
+}
+
 #form-contacto {
     background-color: white;
     border: 2px dashed darkseagreen;
     margin: 20px;
     padding: 30px;
     border-radius: 10px;
-    max-width: 500px;
+    width: 500px;
+    justify-self: center;
 }
 
 label {
@@ -196,4 +334,20 @@ footer {
 .btn-social:hover {
     background-color: darkseagreen;
     color: white;
+}
+
+
+/*responsiva en móviles*/
+@media (max-width: 768px) {
+    .ventana-OS {
+        width: 95% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        align-self: center !important;
+        transform: none !important;
+    }
+    
+    .avatar-sentada {
+        display: none;
+    }
 }

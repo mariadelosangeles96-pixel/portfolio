@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mars - Mi Portfolio</title>
     <link rel="stylesheet" href="portfolio-estilos.css">
+    <script src="portfolio-js.js" defer></script>
 </head>
 
 <body>
@@ -17,6 +18,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#skills">Skills</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#proyectos">Proyectos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#contacto">Contacto</a>
@@ -32,24 +36,30 @@
         </nav>
         <div class="iconos-OS">
             <!--iconos decorativos de la barra-->
+            <button id="theme-toggle" class="boton-tema" aria-label="Cambiar tema">
+            <span class="icon-sun">☀️</span>
+        </button>
         </div>
     </header>
-    <main>
-        <!--img mi avatar-->
+    <main class="escritorio-os">
+        <div class="contenedor-presentacion">
+            <img src="../bocetos/boceto_miPersonaje.png" alt="Mars" class="avatar-sentada">
 
-        <!--idea principal: cada sección será una "ventana" del OS-->
-        <!--sección 1: sobre mí-->
-        <section id="sobreMi" class="ventana-OS">
-            <header class="header-ventana">
-                <h2>Sobre mí</h2> <!--a modo de readme-->
-                <div class="botones-ventana">
-                    <!--iconos decorativos de botones de la ventana-->
+            <!--idea principal: cada sección será una "ventana" del OS-->
+            <!--sección 1: sobre mí-->
+            <section id="sobreMi" class="ventana-OS">
+                <header class="header-ventana">
+                    <h2>Sobre mí (README.md)</h2> <!--a modo de readme-->
+                    <div class="botones-ventana">
+                        <!--iconos decorativos de botones de la ventana-->
+                        <span>🗕</span><span>🗖</span><span>✖</span>
+                    </div>
+                </header>
+                <div class="contenido-sobreMi">
+                    <p>texto sobre mí</p>
                 </div>
-            </header>
-            <div class="contenido-sobreMi">
-                <p>texto sobre mí</p>
-            </div>
-        </section>
+            </section>
+        </div>
 
         <!--sección 2: mis habilidades-->
         <section id="skills" class="ventana-OS">
@@ -57,21 +67,92 @@
                 <h2>Skills</h2>
                 <div class="botones-ventana">
                     <!--iconos decorativos de botones de la ventana-->
+                    <span>🗕</span><span>🗖</span><span>✖</span>
                 </div>
             </header>
             <div class="contenido-skills">
                 <ul class="lista-skills">
-                    <li><img src="" alt="icono HTML">HTML</li> <!--añadir iconos-->
-                    <li><img src="" alt="icono CSS">CSS</li>
+                    <li><img src="../bocetos/html1-icon.png" alt="icono HTML">
+                        <span class="skill-texto">
+                            HTML5 <br>
+                            <span class="puntos-vida">♥♥♥♥♡</span>
+                        </span>
+                    </li>
+                    <li><img src="../bocetos/css1-icon.png" alt="icono CSS">
+                        <span class="skill-texto">
+                            CSS3<br>
+                            <span class="puntos-vida">♥♥♥♥♡</span>
+                        </span>
+                    </li>
+                    <li><img src="../bocetos/javascript-icon.png" alt="icono javascript">
+                        <span class="skill-texto">
+                            JavaScript<br>
+                            <span class="puntos-vida">♥♥♥♡♡</span>
+                        </span>
+                    </li>
+                    <li><img src="../bocetos/java1-icon.png" alt="icono java">
+                        <span class="skill-texto">
+                            Java<br>
+                            <span class="puntos-vida">♥♥♥♡♡</span>
+                        </span>
+                    </li>
+                    <li><img src="../bocetos/bootstrap1-icon.png" alt="icono bootstrap">
+                        <span class="skill-texto">
+                            Bootstrap<br>
+                            <span class="puntos-vida">♥♥♥♥♡</span>
+                        </span>
+                    </li>
+                    <li><img src="../bocetos/mysql1-icon.png" alt="icono mysql">
+                        <span class="skill-texto">
+                            MySQL<br>
+                            <span class="puntos-vida">♥♥♡♡♡</span>
+                        </span>
+                    </li>
+                    <!--
+                    <li><img src="../bocetos/photoshop1-icon.png" alt="icono photoshop">
+                        <span class="skill-texto">
+                            Photoshop<br>
+                            <span class="puntos-vida">♥♥♥♥♡</span>
+                        </span>
+                    </li>
+                    -->
                 </ul>
             </div>
         </section>
 
-        <!--sección 3: proyectos-->
+        <!--sección 3: idiomas-->
+        <section id="idiomas" class="ventana-OS">
+            <header class="header-ventana">
+                <h2>Idiomas</h2>
+                <div class="botones-ventana">
+                    <!--iconos decorativos de botones de la ventana-->
+                    <span>🗕</span><span>🗖</span><span>✖</span>
+                </div>
+            </header>
+            <div class="contenido-idiomas">
+                <div class="idioma-item">
+                    <h4>Español</h4>
+                    <div class="progreso-bar">
+                        <div class="llenado" style="width: 100%;"></div>
+                    </div>
+                </div>
+                <div class="idioma-item">
+                    <h4>Inglés</h4>
+                    <div class="progreso-bar">
+                        <div class="llenado" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--sección 4: proyectos-->
         <section id="proyectos" class="ventana-OS">
             <header class="header-ventana">
                 <h2>Mis Proyectos</h2>
-                <div class="botones-ventana"></div>
+                <div class="botones-ventana">
+                    <!--iconos decorativos de botones de la ventana-->
+                    <span>🗕</span><span>🗖</span><span>✖</span>
+                </div>
             </header>
             <div class="contenido-proyectos">
                 <article class="proyecto-card">
@@ -101,6 +182,10 @@
         <section id="contacto" class="ventana-OS">
             <header class="header-ventana">
                 <h2>Contacta conmigo</h2>
+                <div class="botones-ventana">
+                    <!--iconos decorativos de botones de la ventana-->
+                    <span>🗕</span><span>🗖</span><span>✖</span>
+                </div>
             </header>
             <div class="div-formulario">
                 <form id="form-contacto">
