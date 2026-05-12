@@ -8,10 +8,13 @@ Idea estética: Cottagecore Digital. Una mezcla de interfaces de sistemas operat
 ## Tecnologías utilizadas hasta el momento
 * **HTML5:** Estructura semántica para accesibilidad y SEO.
 * **CSS3:** Diseño personalizado.
+* **JavaScript:** Funcionalidad.
 * **Photoshop con Wacom Intuos:** Ilustraciones y elementos visuales.
 
 ## En desarrollo
-- Creación de las ilustraciones.
+- Creación de más ilustraciones.
 - Implementación de un widget musical interactivo.
 - Animaciones con CSS.
-- Diseño responsivo para dispositivos móviles.
+- Diseño responsivo para otros dispositivos.
+- Botón tema claro/oscuro.
+- Ajustes de diseño.
