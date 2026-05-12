@@ -7,6 +7,7 @@
     <title>Mars - Mi Portfolio</title>
     <link rel="stylesheet" href="portfolio-estilos.css">
     <script src="portfolio-js.js" defer></script>
+    <script src="estudios.js" defer></script>
 </head>
 
 <body>
@@ -35,10 +36,10 @@
             </ul>
         </nav>
         <div class="iconos-OS">
-            <!--iconos decorativos de la barra-->
+            <!--iconos decorativos de la barra (batería, volumen, wifi...)-->
             <button id="theme-toggle" class="boton-tema" aria-label="Cambiar tema">
-            <span class="icon-sun">☀️</span>
-        </button>
+                <span class="icon-sun">☀️</span>
+            </button>
         </div>
     </header>
     <main class="escritorio-os">
@@ -49,24 +50,51 @@
             <!--sección 1: sobre mí-->
             <section id="sobreMi" class="ventana-OS">
                 <header class="header-ventana">
-                    <h2>Sobre mí (README.md)</h2> <!--a modo de readme-->
+                    <h2>README.md</h2>
                     <div class="botones-ventana">
                         <!--iconos decorativos de botones de la ventana-->
                         <span>🗕</span><span>🗖</span><span>✖</span>
                     </div>
                 </header>
                 <div class="contenido-sobreMi">
-                    <p>texto sobre mí</p>
+                    <p>
+                        ¡Hola! Soy <strong>Mars</strong>, y me muevo en ese punto donde el código y la ilustración se encuentran. <br> 
+                        Actualmente estudio 1º de DAW, donde puedo aplicar mi personalidad detallista en el código: 
+                        soy muy estricta con el orden y el clean code, porque creo que la belleza de un proyecto 
+                        empieza desde su estructura interna. <br>
+                        Mi creatividad no se queda solo en el teclado. Cuando no estoy programando, me encontrarás 
+                        haciendo crochet, dibujando o fotografiando la naturaleza. <br>
+                        Ya sea resolviendo un bug, leyendo, jugando o escuchando música, mi objetivo es siempre el mismo: 
+                        observar los pequeños detalles que otros pasan por alto y convertirlos en algo especial.</p>
                 </div>
             </section>
         </div>
 
-        <!--sección 2: mis habilidades-->
+        <!--sección 2: mis estudios-->
+        <section id="estudios" class="ventana-OS">
+            <header class="header-ventana">
+                <h2>Estudios.log</h2>
+                <div class="botones-ventana">
+                    <span>🗕</span><span>🗖</span><span>✖</span>
+                </div>
+            </header>
+
+            <div id="lista-estudios" class="contenido-ventana"></div>
+            <button id="btn-abrir-formulario">+</button>
+
+            <div id="modal-estudios" class="formulario-estudios">
+                <input type="text" id="input-titulo" placeholder="Título del estudio">
+                <input type="text" id="input-centro" placeholder="Centro">
+                <input type="text" id="input-fecha" placeholder="Fecha">
+                <button id="btn-guardar-estudio">Añadir a la lista</button>
+            </div>
+        </section>
+
+        <!--sección 3: mis habilidades-->
         <section id="skills" class="ventana-OS">
             <header class="header-ventana">
                 <h2>Skills</h2>
                 <div class="botones-ventana">
-                    <!--iconos decorativos de botones de la ventana-->
                     <span>🗕</span><span>🗖</span><span>✖</span>
                 </div>
             </header>
@@ -120,12 +148,11 @@
             </div>
         </section>
 
-        <!--sección 3: idiomas-->
+        <!--sección 4: idiomas-->
         <section id="idiomas" class="ventana-OS">
             <header class="header-ventana">
                 <h2>Idiomas</h2>
                 <div class="botones-ventana">
-                    <!--iconos decorativos de botones de la ventana-->
                     <span>🗕</span><span>🗖</span><span>✖</span>
                 </div>
             </header>
@@ -145,12 +172,11 @@
             </div>
         </section>
 
-        <!--sección 4: proyectos-->
+        <!--sección 5: proyectos-->
         <section id="proyectos" class="ventana-OS">
             <header class="header-ventana">
                 <h2>Mis Proyectos</h2>
                 <div class="botones-ventana">
-                    <!--iconos decorativos de botones de la ventana-->
                     <span>🗕</span><span>🗖</span><span>✖</span>
                 </div>
             </header>
@@ -178,12 +204,11 @@
             </div>
         </section>
 
-        <!--sección 4: contacto-->
+        <!--sección 6: contacto-->
         <section id="contacto" class="ventana-OS">
             <header class="header-ventana">
                 <h2>Contacta conmigo</h2>
                 <div class="botones-ventana">
-                    <!--iconos decorativos de botones de la ventana-->
                     <span>🗕</span><span>🗖</span><span>✖</span>
                 </div>
             </header>

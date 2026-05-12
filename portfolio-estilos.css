@@ -42,13 +42,12 @@ body {
     position: relative;
     width: 70%;
     margin-left: 20%;
-    margin-bottom: 40px;
 }
 
 .avatar-sentada {
     position: absolute;
     left: -200px;
-    top: -80px;
+    top: -55px;
     width: 400px;
     z-index: 10;
     filter: drop-shadow(5px 5px 0px rgba(139, 69, 19, 0.2));
@@ -129,16 +128,47 @@ body {
     color: saddlebrown;
 }
 
-.contenido-sobreMi, .contenido-skills {
+#sobreMi{
+    width: 800px;
+    margin-left: 8%;
+}
+
+.contenido-sobreMi {
     padding: 20px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.formulario-estudios {
+    display: none; 
+    padding: 20px;
+    border-top: 1px solid var(--border-color);
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.formulario-estudios.activo {
+    display: block;
+}
+
+#estudios {
+    width: 50%;
+    align-self: flex-start;
+    margin-left: 50px;
+}
+
+#lista-estudios {
+    padding: 10px 20px;
 }
 
 #skills {
-    width: 60%;
+    width: 50%;
     align-self: flex-end;
     position: relative;
     z-index: 1;
     margin-top: -30px;
+    margin-right: 50px;
 }
 
 .lista-skills {
