@@ -11,21 +11,18 @@
 </head>
 
 <body>
-    <header class="header-principal">
-        <nav> <!--menú-->
+    <!--idea principal: OS donde cada sección será una "ventana"-->
+    <header class="header-principal"> <!--barra de tareas/menú-->
+        <div class="buscador-container">
+            <input type="text" id="input-busqueda" placeholder="Buscar...">
+        </div>
+
+        <nav>
             <ul class="lista-navbar">
-                <li class="nav-item">
-                    <a class="nav-link" href="#sobremi">Sobre mí</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#proyectos">Proyectos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a>
-                </li>
+                <li><a class="nav-link" href="#sobreMi">Sobre mí</a></li>
+                <li><a class="nav-link" href="#skills">Skills</a></li>
+                <li><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                <li><a class="nav-link" href="#contacto">Contacto</a></li>
                 <!--idea provisional: botón offcanvas
                     <li class="nav-item">
                         <button class="boton-inicio" type="button">
@@ -35,108 +32,154 @@
                     -->
             </ul>
         </nav>
+
         <div class="iconos-OS">
-            <!--iconos decorativos de la barra (batería, volumen, wifi...)-->
             <button id="theme-toggle" class="boton-tema" aria-label="Cambiar tema">
-                <span class="icon-sun">☀️</span>
+                <img src="./../bocetos/moon-icon.png" alt="Modo nocturno" class="icon-sun">
             </button>
+            <img src="./../bocetos/wifi-icon.png" class="icono"></img>
+            <img src="./../bocetos/volume-icon.png" class="icono"></img>
+            <img src="./../bocetos/battery-icon.png" class="icono"></img>
+            <span id="reloj-sistema" class="reloj">00:00</span>
         </div>
     </header>
-    <main class="escritorio-os">
-        <div class="contenedor-presentacion">
-            <img src="../bocetos/boceto_miPersonaje.png" alt="Mars" class="avatar-sentada">
 
-            <!--idea principal: cada sección será una "ventana" del OS-->
-            <!--sección 1: sobre mí-->
-            <section id="sobreMi" class="ventana-OS">
+    <main class="escritorio-os">
+        <div class="contenedor-desktop-windows"> <!--agrupa las 3 columnas-->
+            <div class="columna-os columna-izquierda"> <!--columna 1: habilidades-->
+                <!--sección avatar-->
+                <section id="avatar" class="ventana-OS">
+                    <header class="header-ventana">
+                        <h2>Mars.png</h2>
+                        <div class="botones-ventana">
+                            <span>🗕</span><span>🗖</span><span>✖</span>
+                        </div>
+                    </header>
+                    <div class="cuerpo-ventana-avatar">
+                        <img src="../bocetos/boceto_miPersonaje.png" alt="Mars" class="avatar-sentada">
+                    </div>
+                </section>
+            </div>
+
+            <div class="columna-os columna-centro">
+                <!--sección sobre mí-->
+                <section id="sobreMi" class="ventana-OS">
+                    <header class="header-ventana">
+                        <h2>README.md</h2>
+                        <div class="botones-ventana">
+                            <!--iconos decorativos de botones de la ventana-->
+                            <span>🗕</span><span>🗖</span><span>✖</span>
+                        </div>
+                    </header>
+                    <div class="contenido-sobreMi">
+                        <p>
+                            ¡Hola! Soy <strong>Mars</strong>, y tras haber sido logopeda y profesora de inglés, he descubierto
+                            que mi verdadera pasión es el desarrollo web, el cual me gusta combinar con la ilustración.
+                            Actualmente estudio 1º de DAW, donde mi personalidad detallista se ve reflejada en el código. <br><br>
+                            Mi creatividad no se queda solo en el teclado. Cuando no estoy programando, me
+                            encontrarás haciendo crochet, dibujando o fotografiando la naturaleza. <br>
+                            Ya sea resolviendo un bug, leyendo, jugando, escuchando música... mi objetivo es siempre el mismo:
+                            observar los pequeños detalles que otros pasan por alto y convertirlos en algo especial.
+                        </p>
+                    </div>
+                </section>
+
+                <!--sección idiomas-->
+                <section id="idiomas" class="ventana-OS">
+                    <header class="header-ventana">
+                        <h2>Idiomas</h2>
+                        <div class="botones-ventana">
+                            <span>🗕</span><span>🗖</span><span>✖</span>
+                        </div>
+                    </header>
+                    <div class="contenido-idiomas">
+                        <div class="idioma-item">
+                            <h4>Español</h4>
+                            <div class="progreso-bar">
+                                <div class="llenado" style="width: 100%;"></div>
+                            </div>
+                        </div>
+                        <div class="idioma-item">
+                            <h4>Inglés</h4>
+                            <div class="progreso-bar">
+                                <div class="llenado" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <div class="columna-os columna-derecha"> <!--avatar y contacto-->
+                <!--sección mis estudios-->
+                <section id="estudios" class="ventana-OS">
+                    <header class="header-ventana">
+                        <h2>Estudios.log</h2>
+                        <div class="botones-ventana">
+                            <span>🗕</span><span>🗖</span><span>✖</span>
+                        </div>
+                    </header>
+
+                    <div id="lista-estudios" class="contenido-ventana"></div>
+                    <button id="btn-abrir-formulario">+</button>
+
+                    <div id="modal-estudios" class="formulario-estudios">
+                        <input type="text" id="input-titulo" placeholder="Título del estudio">
+                        <input type="text" id="input-centro" placeholder="Centro">
+                        <input type="text" id="input-fecha" placeholder="Fecha">
+                        <button id="btn-guardar-estudio">Añadir a la lista</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+        <div class="secciones-inferiores">
+            <!--sección mis habilidades-->
+            <section id="skills" class="ventana-OS">
                 <header class="header-ventana">
-                    <h2>README.md</h2>
+                    <h2>Skills</h2>
                     <div class="botones-ventana">
-                        <!--iconos decorativos de botones de la ventana-->
                         <span>🗕</span><span>🗖</span><span>✖</span>
                     </div>
                 </header>
-                <div class="contenido-sobreMi">
-                    <p>
-                        ¡Hola! Soy <strong>Mars</strong>, y me muevo en ese punto donde el código y la ilustración se encuentran. <br> 
-                        Actualmente estudio 1º de DAW, donde puedo aplicar mi personalidad detallista en el código: 
-                        soy muy estricta con el orden y el clean code, porque creo que la belleza de un proyecto 
-                        empieza desde su estructura interna. <br>
-                        Mi creatividad no se queda solo en el teclado. Cuando no estoy programando, me encontrarás 
-                        haciendo crochet, dibujando o fotografiando la naturaleza. <br>
-                        Ya sea resolviendo un bug, leyendo, jugando o escuchando música, mi objetivo es siempre el mismo: 
-                        observar los pequeños detalles que otros pasan por alto y convertirlos en algo especial.</p>
-                </div>
-            </section>
-        </div>
-
-        <!--sección 2: mis estudios-->
-        <section id="estudios" class="ventana-OS">
-            <header class="header-ventana">
-                <h2>Estudios.log</h2>
-                <div class="botones-ventana">
-                    <span>🗕</span><span>🗖</span><span>✖</span>
-                </div>
-            </header>
-
-            <div id="lista-estudios" class="contenido-ventana"></div>
-            <button id="btn-abrir-formulario">+</button>
-
-            <div id="modal-estudios" class="formulario-estudios">
-                <input type="text" id="input-titulo" placeholder="Título del estudio">
-                <input type="text" id="input-centro" placeholder="Centro">
-                <input type="text" id="input-fecha" placeholder="Fecha">
-                <button id="btn-guardar-estudio">Añadir a la lista</button>
-            </div>
-        </section>
-
-        <!--sección 3: mis habilidades-->
-        <section id="skills" class="ventana-OS">
-            <header class="header-ventana">
-                <h2>Skills</h2>
-                <div class="botones-ventana">
-                    <span>🗕</span><span>🗖</span><span>✖</span>
-                </div>
-            </header>
-            <div class="contenido-skills">
-                <ul class="lista-skills">
-                    <li><img src="../bocetos/html1-icon.png" alt="icono HTML">
-                        <span class="skill-texto">
-                            HTML5 <br>
-                            <span class="puntos-vida">♥♥♥♥♡</span>
-                        </span>
-                    </li>
-                    <li><img src="../bocetos/css1-icon.png" alt="icono CSS">
-                        <span class="skill-texto">
-                            CSS3<br>
-                            <span class="puntos-vida">♥♥♥♥♡</span>
-                        </span>
-                    </li>
-                    <li><img src="../bocetos/javascript-icon.png" alt="icono javascript">
-                        <span class="skill-texto">
-                            JavaScript<br>
-                            <span class="puntos-vida">♥♥♥♡♡</span>
-                        </span>
-                    </li>
-                    <li><img src="../bocetos/java1-icon.png" alt="icono java">
-                        <span class="skill-texto">
-                            Java<br>
-                            <span class="puntos-vida">♥♥♥♡♡</span>
-                        </span>
-                    </li>
-                    <li><img src="../bocetos/bootstrap1-icon.png" alt="icono bootstrap">
-                        <span class="skill-texto">
-                            Bootstrap<br>
-                            <span class="puntos-vida">♥♥♥♥♡</span>
-                        </span>
-                    </li>
-                    <li><img src="../bocetos/mysql1-icon.png" alt="icono mysql">
-                        <span class="skill-texto">
-                            MySQL<br>
-                            <span class="puntos-vida">♥♥♡♡♡</span>
-                        </span>
-                    </li>
-                    <!--
+                <div class="contenido-skills">
+                    <ul class="lista-skills">
+                        <li><img src="../bocetos/html1-icon.png" alt="icono HTML">
+                            <span class="skill-texto">
+                                HTML5 <br>
+                                <span class="puntos-vida">♥♥♥♥♡</span>
+                            </span>
+                        </li>
+                        <li><img src="../bocetos/css1-icon.png" alt="icono CSS">
+                            <span class="skill-texto">
+                                CSS3<br>
+                                <span class="puntos-vida">♥♥♥♥♡</span>
+                            </span>
+                        </li>
+                        <li><img src="../bocetos/javascript-icon.png" alt="icono javascript">
+                            <span class="skill-texto">
+                                JavaScript<br>
+                                <span class="puntos-vida">♥♥♥♡♡</span>
+                            </span>
+                        </li>
+                        <li><img src="../bocetos/java1-icon.png" alt="icono java">
+                            <span class="skill-texto">
+                                Java<br>
+                                <span class="puntos-vida">♥♥♥♡♡</span>
+                            </span>
+                        </li>
+                        <li><img src="../bocetos/bootstrap1-icon.png" alt="icono bootstrap">
+                            <span class="skill-texto">
+                                Bootstrap<br>
+                                <span class="puntos-vida">♥♥♥♥♡</span>
+                            </span>
+                        </li>
+                        <li><img src="../bocetos/mysql1-icon.png" alt="icono mysql">
+                            <span class="skill-texto">
+                                MySQL<br>
+                                <span class="puntos-vida">♥♥♡♡♡</span>
+                            </span>
+                        </li>
+                        <!--
                     <li><img src="../bocetos/photoshop1-icon.png" alt="icono photoshop">
                         <span class="skill-texto">
                             Photoshop<br>
@@ -144,97 +187,74 @@
                         </span>
                     </li>
                     -->
-                </ul>
-            </div>
-        </section>
-
-        <!--sección 4: idiomas-->
-        <section id="idiomas" class="ventana-OS">
-            <header class="header-ventana">
-                <h2>Idiomas</h2>
-                <div class="botones-ventana">
-                    <span>🗕</span><span>🗖</span><span>✖</span>
+                    </ul>
                 </div>
-            </header>
-            <div class="contenido-idiomas">
-                <div class="idioma-item">
-                    <h4>Español</h4>
-                    <div class="progreso-bar">
-                        <div class="llenado" style="width: 100%;"></div>
+            </section>
+
+            <!--sección proyectos-->
+            <section id="proyectos" class="ventana-OS">
+                <header class="header-ventana">
+                    <h2>Mis Proyectos</h2>
+                    <div class="botones-ventana">
+                        <span>🗕</span><span>🗖</span><span>✖</span>
                     </div>
+                </header>
+                <div class="contenido-proyectos">
+                    <article class="proyecto-card">
+                        <div class="proyecto-img">1</div>
+                        <h3>Proyecto 1</h3>
+                        <p>Descripción proyecto 1.</p>
+                        <a href="#" class="btn-proyecto">Saber más</a>
+                    </article>
+
+                    <article class="proyecto-card">
+                        <div class="proyecto-img">2</div>
+                        <h3>Proyecto 2</h3>
+                        <p>Descripción proyecto 2.</p>
+                        <a href="#" class="btn-proyecto">Saber más</a>
+                    </article>
+
+                    <article class="proyecto-card">
+                        <div class="proyecto-img">3</div>
+                        <h3>Proyecto 3</h3>
+                        <p>Descripción proyecto 3.</p>
+                        <a href="#" class="btn-proyecto">Saber más</a>
+                    </article>
                 </div>
-                <div class="idioma-item">
-                    <h4>Inglés</h4>
-                    <div class="progreso-bar">
-                        <div class="llenado" style="width: 90%;"></div>
+            </section>
+
+            <!--sección contacto-->
+            <section id="contacto" class="ventana-OS">
+                <header class="header-ventana">
+                    <h2>Contacta conmigo</h2>
+                    <div class="botones-ventana">
+                        <span>🗕</span><span>🗖</span><span>✖</span>
                     </div>
+                </header>
+                <div class="div-formulario">
+                    <form id="form-contacto">
+                        <label for="name">Nombre</label>
+                        <input class="form-input" id="name" type="text" placeholder="Tu nombre..." required />
+                        <br><br>
+
+                        <label for="email">Email</label>
+                        <input class="form-input" id="email" type="email" placeholder="nombre@ejemplo.com" required />
+                        <br><br>
+
+                        <label for="message">Mensaje</label>
+                        <textarea class="form-input" id="message" type="text" placeholder="Escribe tu mensaje..."
+                            required></textarea>
+                        <br><br>
+
+                        <!--añadir validación del formulario-->
+
+                        <button id="enviar" type="submit">
+                            Enviar
+                        </button>
+                    </form>
                 </div>
-            </div>
-        </section>
-
-        <!--sección 5: proyectos-->
-        <section id="proyectos" class="ventana-OS">
-            <header class="header-ventana">
-                <h2>Mis Proyectos</h2>
-                <div class="botones-ventana">
-                    <span>🗕</span><span>🗖</span><span>✖</span>
-                </div>
-            </header>
-            <div class="contenido-proyectos">
-                <article class="proyecto-card">
-                    <div class="proyecto-img">1</div>
-                    <h3>Proyecto 1</h3>
-                    <p>Descripción proyecto 1.</p>
-                    <a href="#" class="btn-proyecto">Saber más</a>
-                </article>
-
-                <article class="proyecto-card">
-                    <div class="proyecto-img">2</div>
-                    <h3>Proyecto 2</h3>
-                    <p>Descripción proyecto 2.</p>
-                    <a href="#" class="btn-proyecto">Saber más</a>
-                </article>
-
-                <article class="proyecto-card">
-                    <div class="proyecto-img">3</div>
-                    <h3>Proyecto 3</h3>
-                    <p>Descripción proyecto 3.</p>
-                    <a href="#" class="btn-proyecto">Saber más</a>
-                </article>
-            </div>
-        </section>
-
-        <!--sección 6: contacto-->
-        <section id="contacto" class="ventana-OS">
-            <header class="header-ventana">
-                <h2>Contacta conmigo</h2>
-                <div class="botones-ventana">
-                    <span>🗕</span><span>🗖</span><span>✖</span>
-                </div>
-            </header>
-            <div class="div-formulario">
-                <form id="form-contacto">
-                    <label for="name">Nombre</label>
-                    <input class="form-input" id="name" type="text" placeholder="Tu nombre..." required />
-                    <br><br>
-
-                    <label for="email">Email</label>
-                    <input class="form-input" id="email" type="email" placeholder="nombre@ejemplo.com" required />
-                    <br><br>
-
-                    <label for="message">Mensaje</label>
-                    <textarea class="form-input" id="message" type="text" placeholder="Escribe tu mensaje..."
-                        required></textarea>
-                    <br><br>
-
-                    <!--añadir validación del formulario-->
-
-                    <button id="enviar" type="submit">
-                        Enviar
-                    </button>
-                </form>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
 
     <footer>
