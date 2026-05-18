@@ -1,4 +1,4 @@
-# Jardín de código - Portfolio personal
+# Portfolio personal
 ### Mars Gómez (1º DAW)
 
 Este es mi proyecto de portfolio. 
